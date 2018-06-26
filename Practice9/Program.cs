@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading.Tasks;         
 
 namespace Practice9
 {
@@ -105,7 +105,11 @@ namespace Practice9
         }
         static void Search(Point beg,int e,int count)
         {
-            if (beg.data != e)
+            if (beg == null)
+            {
+                Console.WriteLine("No such element.");
+            }
+            else if (beg.data != e)
             {
                 beg = beg.next;
                 count++;
